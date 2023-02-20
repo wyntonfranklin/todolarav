@@ -3,6 +3,7 @@
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// route with controller
+Route::get('/home',[HomeController::class,'index'])->name('home.index');
+Route::get("/home/team",[HomeController::class,'team'])->name('home.team');
+Route::post("/home/store",[HomeController::class,'store'])->name('home.store');
+Route::get("/home/team",[HomeController::class,'team'])->name('home.team');
+Route::get("/home/projects",[HomeController::class,'projects'])->name('home.projects');
+// post controller route
+Route::post("/home/delete",[HomeController::class,'delete'])->name('home.delete');
 
 // dashboard router function with controller
 Route::get('/dashboard',[DashboardController::class,'index']);

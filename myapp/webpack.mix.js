@@ -19,3 +19,4 @@ mix.js('resources/js/app.js', 'public/js')
 
 // add javascript files
 mix.js('resources/js/customer.js', 'public/js')
+mix.js('resources/js/main.js', 'public/js')

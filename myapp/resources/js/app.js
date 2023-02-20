@@ -18,10 +18,12 @@ const app = createApp({});
 import ExampleComponent from './components/ExampleComponent.vue';
 import TutorialsComponent  from "./components/TutorialsComponent.vue";
 import ApiComponent from "./components/ApiComponent.vue";
+import ProjectsComponent from "./components/ProjectsComponent.vue";
 
 app.component('example-component', ExampleComponent);
 app.component('tutorials-component', TutorialsComponent);
 app.component("api-component", ApiComponent);
+app.component("projects-component", ProjectsComponent);
 
 /**
  * The following block of code may be used to automatically register your
